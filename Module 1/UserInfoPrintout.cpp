@@ -15,4 +15,11 @@ int main() {
     streetAddress = "7800 Beverly Blvd.";
     city = "Los Angeles";
     zipCode = "90036";
+
+    // Print out info
+    std::cout << "Person's Information:" << std::endl;
+    std::cout << "Name:" << firstName << " " << lastName << std::endl;
+    std::cout << "Street Address:" << streetAddress << std::endl;
+    std::cout << "City:" << city << std::endl;
+    std::cout << "Zip Code:" << zipCode << std::endl;
 }
