@@ -8,4 +8,11 @@ int main() {
     std::string streetAddress;
     std::string city;
     std::string zipCode;
+
+    // Assign variables dummy info
+    firstName = "Bob";
+    lastName = "Barker";
+    streetAddress = "7800 Beverly Blvd.";
+    city = "Los Angeles";
+    zipCode = "90036";
 }
