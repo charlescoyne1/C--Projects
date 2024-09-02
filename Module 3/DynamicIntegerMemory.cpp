@@ -33,7 +33,7 @@ int main()
     cout << "num2 = " << num2 << endl;
     cout << "num3 = " << num3 << endl;
 
-    cout << "Pointer ptr1 is at memory location " << ptr1 << " with the user input value of " << *ptr1 << endl;
+    cout << "\nPointer ptr1 is at memory location " << ptr1 << " with the user input value of " << *ptr1 << endl;
     cout << "Pointer ptr2 is at memory location " << ptr2 << " with the user input value of " << *ptr2 << endl;
     cout << "Pointer ptr3 is at memory location " << ptr3 << " with the user input value of " << *ptr3 << endl;
 
