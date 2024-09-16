@@ -30,7 +30,10 @@ int main()
     std::cout << "Enter text to input to the file. (Will be appended to any existing text): ";
     std::getline(std::cin, userInput);
 
+    // Append the input to the file
+    appendToText(filename, userInput);
 
+    
 
     return 0;
 }
