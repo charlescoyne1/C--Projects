@@ -16,7 +16,40 @@ void appendToText(const std::string &filename, const std::string &input)
     }
     else
     {
-        std::cerr << "Unable to open file, check to see if file is not already opened, then close and rerun." << std::endl;
+        std::cerr << "Unable to open file, check to see if file already opened, close and rerun." << std::endl;
+    }
+}
+
+void reverseTextContents(const std::string &inputTxt, const std::string &outputTxt)
+{
+    std::ifstream file(inputTxt);
+
+    // If file is open, error out
+    if (!file.is_open())
+    {
+        std::cerr << "Unable to open file, check to see if file opened already, close and rerun." << std::endl;
+        return;
+    }
+
+    // Transpose file contents to string
+    std::string contents((std::istreambuf_iterator<char>(file)),
+                         (std::istreambuf_iterator<char>()));
+    file.close();
+
+    // Reverse the string, contents
+    std::reverse(contents.begin(), contents.end());
+
+    // Write the reversed string, contents, to a new txt file
+    std::ofstream reversedFile(outputTxt);
+    if (reversedFile.is_open())
+    {
+        reversedFile << contents;
+        reversedFile.close();
+        std::cout << "Text in file successfully written reversed to " << outputTxt << std::endl;
+    }
+    else
+    {
+        std::cerr << "Check if file is open, unable to open txt file " << outputTxt << " for writing." << std::endl;
     }
 }
 
@@ -33,7 +66,8 @@ int main()
     // Append the input to the file
     appendToText(filename, userInput);
 
-    
+    // Reverse txt file's contents
+    reverseTextContents(filename, reversedFile);
 
     return 0;
 }
