@@ -55,8 +55,8 @@ void reverseTextContents(const std::string &inputTxt, const std::string &outputT
 
 int main()
 {
-    std::string filename = "/CSC450_CT5_mod5.txt";
-    std::string reversedFile = "/CSC450_CT5_mod5_reversed.txt";
+    std::string filename = "CSC450_CT5_mod5.txt";
+    std::string reversedFile = "CSC450_CT5_mod5_reversed.txt";
     std::string userInput;
 
     // Get user input
