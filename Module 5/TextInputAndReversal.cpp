@@ -8,7 +8,7 @@ void appendToText(const std::string &filename, const std::string &input)
     std::ofstream file;
     // Open the txt file to append on
     file.open(filename, std::ios::app);
-    if(file..is_open()) 
+    if(file.is_open()) 
     {
         file << input << std::endl;
         file.close();
