@@ -6,7 +6,7 @@ std::mutex mtx;
 
 void countUp()
 {
-    for (int i = 1; i <= 20; ++i)
+    for (int i = 0; i <= 20; ++i)
     {
         std::lock_guard<std::mutex> lock(mtx);
         std::cout << "Counting up: " << i << std::endl;
