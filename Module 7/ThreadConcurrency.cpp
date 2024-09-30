@@ -24,5 +24,11 @@ void countDown()
 
 int main()
 {
+    std::thread thread1(countUp);
+    thread1.join();
+
+    std::thread thread2(countDown);
+    thread2.join();
+
     return 0;
 }
