@@ -4,6 +4,7 @@
 
 std::mutex mtx; 
 
+// Function counting up
 void countUp()
 {
     for (int i = 0; i <= 20; ++i)
@@ -13,6 +14,8 @@ void countUp()
     }
 }
 
+
+// Function counting down
 void countDown()
 {
     for (int i = 20; i >= 0; --i)
@@ -24,6 +27,7 @@ void countDown()
 
 int main()
 {
+    // Concurrent threads
     std::thread thread1(countUp);
     std::thread thread2(countDown);
 
