@@ -23,8 +23,8 @@ public class JavaThreadConcurrency {
 
     public static void main(String[] args) {
         // Concurrent thread creation
-        Thread thread1 = new Thread();
-        Thread thread2 = new Thread();
+        Thread thread1 = new Thread(JavaThreadConcurrency::countUp);
+        Thread thread2 = new Thread(JavaThreadConcurrency::countDown);
 
         // Concurrent thread start
         thread1.start();
